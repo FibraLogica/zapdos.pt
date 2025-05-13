@@ -51,9 +51,10 @@
         }
 
         .section-title {
-            @apply text-3xl font-bold text-center mb-4 text-gray-800;
+            @apply text-4xl font-bold text-center mb-8 text-gray-800; 
         }
-        .section-subtitle {
+        .section-subtitle { 
+            /* Este estilo é usado noutras secções, como #solucao e #mercados */
             @apply text-xl text-center text-gray-600 mb-12;
         }
         .card {
@@ -74,6 +75,12 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .quote-style {
+            @apply border-l-4 border-yellow-500 pl-4 italic text-gray-600;
+        }
+        .tech-card-icon { /* Estilo para ícones nos cards de tecnologia */
+            @apply text-4xl text-yellow-400 mb-4;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-700">
@@ -81,7 +88,7 @@
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#" class="flex items-center">
-                <img src="img/logo.jpeg" alt="Logótipo Zapdos Energy" class="h-12 mr-3"> 
+                <img src="img/logo.jpeg" alt="Logótipo Zapdos Energy" class="h-24 mr-3"> 
             </a>
             <div class="hidden md:flex items-center space-x-6">
                 <a href="#solucao" class="text-gray-700 hover:text-yellow-500 py-2 transition-colors duration-300">A Solução</a>
@@ -109,7 +116,6 @@
         <video autoplay muted loop playsinline id="heroVideo">
             <source src="img/background.webm" type="video/webm">
             <source src="img/background.mp4" type="video/mp4">
-
             <img src="img/fallback_hero_image.jpg" alt="Energia em Movimento" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-100;">
         </video>
         <div class="video-overlay"></div>
@@ -128,17 +134,21 @@
 
     <section id="desafio" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="section-title">O Desafio Energético e a <span class="text-yellow-500">Oportunidade Oculta</span></h2>
-            <p class="section-subtitle max-w-3xl mx-auto">
-                Vivemos numa era de crescente dependência energética, onde cada movimento desperdiçado é uma oportunidade perdida. A Zapdos Energy identifica e aproveita essa energia latente.
-            </p>
-            <div class="grid md:grid-cols-2 gap-8 items-center">
+            <h2 class="section-title pb-4">O Desafio Energético e a <span class="text-yellow-500">Oportunidade Oculta</span></h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <img src="https://placehold.co/600x400/e2e8f0/333?text=Desperdício+vs+Oportunidade" alt="Ilustração do desafio energético" class="rounded-lg shadow-lg">
+                    <img src="img/img1.jpg" alt="Ilustração do desafio energético" class="rounded-lg shadow-xl w-full h-auto">
                 </div>
-                <div class="text-lg text-gray-700 space-y-4">
-                    <p>"Cada porta que se abre, cada passo dado, cada pedalada numa bicicleta de ginásio representa um potencial energético que, até agora, tem sido largamente ignorado."</p>
-                    <p>A nossa sociedade caminha para um futuro onde a energia poderá ser mais valiosa que o próprio ouro. A Zapdos Energy transforma o quotidiano em fonte de energia limpa, contribuindo para um futuro mais verde e economicamente eficiente.</p>
+                <div class="text-lg text-gray-700 space-y-6 md:pr-6 text-justify">
+                    <p class="quote-style">
+                        "Cada porta que se abre, cada passo dado, cada pedalada numa bicicleta de ginásio representa um potencial energético que, até agora, tem sido largamente ignorado."
+                    </p>
+                    <p>
+                        A nossa sociedade caminha para um futuro onde a energia poderá ser mais valiosa que o próprio ouro. A Zapdos Energy transforma o quotidiano em fonte de energia limpa, contribuindo para um futuro mais verde e economicamente eficiente.
+                    </p>
+                    <p>
+                        Vivemos numa era de crescente dependência energética, onde cada movimento desperdiçado é uma oportunidade perdida. A Zapdos Energy identifica e aproveita essa energia latente.
+                    </p>
                 </div>
             </div>
         </div>
@@ -146,37 +156,34 @@
 
     <section id="solucao" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="section-title">A Nossa Solução: Consultoria e <span class="text-yellow-500">Produto Modelar</span></h2>
-            <p class="section-subtitle max-w-3xl mx-auto">
-                Não vendemos apenas um produto; oferecemos uma análise especializada e implementamos soluções modulares personalizadas para capturar a energia do seu espaço.
-            </p>
+            <h2 class="section-title pb-4">A Nossa Solução: Consultoria e <span class="text-yellow-500">Produto Modelar</span></h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="card text-center reveal-on-scroll">
                     <img src="img/ZapDoor.jpeg" alt="ZapDoor - Energia de Portas" class="card-image">
                     <div class="card-content">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">ZapDoor</h3>
-                        <p class="text-gray-600">Energia a cada abertura e fecho de portas. Ideal para escritórios, lojas e hospitais.</p>
+                        <p class="text-gray-600 text-justify">Energia a cada abertura e fecho de portas. Ideal para escritórios, lojas e hospitais.</p>
                     </div>
                 </div>
                 <div class="card text-center reveal-on-scroll">
                     <img src="img/ZapFloor.jpeg" alt="ZapFloor - Energia de Passos" class="card-image">
                     <div class="card-content">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">ZapFloor</h3>
-                        <p class="text-gray-600">Captação de energia a partir de passos em pisos e escadas. Perfeito para zonas de grande movimento.</p>
+                        <p class="text-gray-600 text-justify">Captação de energia a partir de passos em pisos e escadas. Perfeito para zonas de grande movimento.</p>
                     </div>
                 </div>
                 <div class="card text-center reveal-on-scroll">
                     <img src="img/ZapFit.jpeg" alt="ZapFit - Energia de Equipamentos de Ginásio" class="card-image">
                     <div class="card-content">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">ZapFit</h3>
-                        <p class="text-gray-600">Transforma o esforço em equipamentos de ginásio em eletricidade. Para um fitness mais sustentável.</p>
+                        <p class="text-gray-600 text-justify">Transforma o esforço em equipamentos de ginásio em eletricidade. Para um fitness mais sustentável.</p>
                     </div>
                 </div>
                 <div class="card text-center reveal-on-scroll">
                     <img src="img/ZapTouch.jpeg" alt="ZapTouch - Energia de Pequenos Movimentos" class="card-image">
                     <div class="card-content">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">ZapTouch</h3>
-                        <p class="text-gray-600">Pequenos movimentos, como pressionar maçanetas, geram energia para sensores e LEDs.</p>
+                        <p class="text-gray-600 text-justify">Pequenos movimentos, como pressionar maçanetas, geram energia para sensores e LEDs.</p>
                     </div>
                 </div>
             </div>
@@ -188,32 +195,36 @@
 
     <section id="tecnologia" class="py-20 bg-gray-800 text-white">
         <div class="container mx-auto px-6">
-            <h2 class="section-title text-white">Como <span class="text-yellow-400">Funciona?</span></h2>
-            <p class="section-subtitle text-gray-300 max-w-3xl mx-auto">
-                Utilizamos princípios de *energy harvesting* consolidados, otimizando-os para máxima eficiência e durabilidade.
-            </p>
-            <div class="grid md:grid-cols-2 gap-10 items-start">
-                <div class="bg-gray-700 p-6 rounded-lg shadow-xl">
+            <h2 class="section-title text-white pb-4">Como <span class="text-yellow-400">Funciona?</span></h2>
+            <div class="grid md:grid-cols-3 gap-8 items-start mb-12">
+                <div class="bg-gray-700 p-6 rounded-lg shadow-xl text-center md:text-left">
+                    <div class="tech-card-icon">⚡</div> 
                     <h3 class="text-2xl font-semibold text-yellow-400 mb-3">Indução Eletromagnética</h3>
-                    <p class="text-gray-300">Microgeradores convertem movimento rotacional ou linear (portas, equipamentos de ginásio) em corrente elétrica, de forma eficiente e robusta.</p>
+                    <p class="text-gray-300">Baseia-se na lei de Faraday. Ideal para movimentos rotacionais ou lineares com amplitude (portas, equipamentos de ginásio).</p>
                 </div>
-                <div class="bg-gray-700 p-6 rounded-lg shadow-xl">
+                <div class="bg-gray-700 p-6 rounded-lg shadow-xl text-center md:text-left">
+                    <div class="tech-card-icon">🖐️</div> 
                     <h3 class="text-2xl font-semibold text-yellow-400 mb-3">Piezoeletricidade</h3>
-                    <p class="text-gray-300">Materiais especiais geram eletricidade quando sofrem pressão ou vibração (pisos, maçanetas), ideal para impactos repetitivos e interações.</p>
+                    <p class="text-gray-300">Certos materiais geram eletricidade sob stress mecânico (pressão, vibração). Ideal para impactos (pisos, maçanetas).</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-xl text-center md:text-left">
+                    <div class="tech-card-icon">↔️</div> 
+                    <h3 class="text-2xl font-semibold text-yellow-400 mb-3">Triboeletricidade</h3>
+                    <p class="text-gray-300">Geração de carga elétrica através do atrito entre materiais. Tecnologia emergente para aplicações de baixo custo.</p>
                 </div>
             </div>
-             <div class="text-center mt-10">
-                <img src="https://placehold.co/700x300/4A5568/E2E8F0?text=Diagrama+Tecnológico+Zapdos" alt="Diagrama da tecnologia Zapdos" class="mx-auto rounded-lg shadow-lg">
+            <div class="text-center max-w-4xl mx-auto">
+                <p class="text-lg text-gray-300 leading-relaxed text-justify">
+                    O nosso foco é selecionar a tecnologia mais eficiente e robusta para cada aplicação, considerando o custo-benefício e a durabilidade. Para isso, utilizamos princípios de <strong class="text-yellow-400 font-semibold">energy harvesting</strong> (colheita de energia) consolidados. Este processo inovador consiste em capturar pequenas quantidades de energia do ambiente ou de atividades humanas – que de outra forma seriam desperdiçadas – e convertê-las em eletricidade utilizável. A investigação e desenvolvimento contínuos são cruciais para otimizar estes métodos, melhorando a eficiência de conversão e explorando novos materiais e designs nos nossos módulos.
+                </p>
+
             </div>
         </div>
     </section>
 
     <section id="mercados" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="section-title">Para Quem é a <span class="text-yellow-500">Zapdos Energy?</span></h2>
-            <p class="section-subtitle max-w-3xl mx-auto">
-                Soluções adaptadas para diversos setores que procuram sustentabilidade, inovação e redução de custos.
-            </p>
+            <h2 class="section-title pb-4">Para Quem é a <span class="text-yellow-500">Zapdos Energy?</span></h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="card">
                     <div class="card-content">
@@ -247,8 +258,8 @@
                 </div>
                  <div class="card bg-yellow-50 border-l-4 border-yellow-500">
                     <div class="card-content">
-                        <h3 class="text-xl font-semibold text-yellow-700 mb-2">O Seu Espaço?</h3>
-                        <p class="text-yellow-600">Tem um espaço com movimento? Vamos analisar o potencial energético juntos!</p>
+                        <h3 class="text-xl font-semibold text-yellow-700 mb-2 pl-1">O Seu Espaço?</h3>
+                        <p class="text-yellow-600 pl-1">Tem um espaço com movimento? Vamos analisar o potencial energético juntos!</p>
                     </div>
                 </div>
             </div>
@@ -257,10 +268,7 @@
 
     <section id="impacto" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="section-title">O Impacto <span class="text-yellow-500">Zapdos Energy</span></h2>
-            <p class="section-subtitle max-w-3xl mx-auto">
-                Mais do que energia, geramos valor ambiental, social e económico.
-            </p>
+            <h2 class="section-title pb-4">O Impacto <span class="text-yellow-500">Zapdos Energy</span></h2>
             <div class="grid md:grid-cols-3 gap-8 text-center">
                 <div class="p-6">
                     <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">🌍</div>
