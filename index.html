@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapdos Energie - Transformando Movimento em Sustentabilidade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/2d3748/e2e8f0?text=Energia+em+Movimento'); /* Placeholder para imagem de fundo hero */
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            @apply text-3xl font-bold text-center mb-4 text-gray-800;
+        }
+        .section-subtitle {
+            @apply text-xl text-center text-gray-600 mb-12;
+        }
+        .card {
+            @apply bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300;
+        }
+        .icon-placeholder {
+            @apply w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4;
+        }
+        /* Animação subtil para cards ao fazer scroll (requer JS, mas pode ser adicionada depois) */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-700">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-yellow-500">Zapdos Energie</a>
+            <div class="hidden md:flex space-x-4">
+                <a href="#solucao" class="text-gray-600 hover:text-yellow-500">A Solução</a>
+                <a href="#tecnologia" class="text-gray-600 hover:text-yellow-500">Tecnologia</a>
+                <a href="#mercados" class="text-gray-600 hover:text-yellow-500">Mercados</a>
+                <a href="#impacto" class="text-gray-600 hover:text-yellow-500">Impacto</a>
+                <a href="#contacto" class="bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600 transition-colors">Contacto</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <a href="#solucao" class="block px-6 py-3 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">A Solução</a>
+            <a href="#tecnologia" class="block px-6 py-3 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">Tecnologia</a>
+            <a href="#mercados" class="block px-6 py-3 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">Mercados</a>
+            <a href="#impacto" class="block px-6 py-3 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">Impacto</a>
+            <a href="#contacto" class="block px-6 py-3 bg-yellow-500 text-white hover:bg-yellow-600 transition-colors">Contacto</a>
+        </div>
+    </nav>
+
+    <header class="hero-bg text-white">
+        <div class="bg-black bg-opacity-50 min-h-screen flex flex-col justify-center items-center text-center px-6 py-20">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                "No universo nada se cria, nada se perde, <span class="text-yellow-400">tudo se transforma.</span>"
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl">
+                A Zapdos Energie capta a energia do seu movimento, convertendo-a em sustentabilidade e inovação para o seu espaço.
+            </p>
+            <div>
+                <a href="#solucao" class="bg-yellow-500 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-600 transition-colors">Descubra a Nossa Solução</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="desafio" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">O Desafio Energético e a <span class="text-yellow-500">Oportunidade Oculta</span></h2>
+            <p class="section-subtitle max-w-3xl mx-auto">
+                Vivemos numa era de crescente dependência energética, onde cada movimento desperdiçado é uma oportunidade perdida. A Zapdos Energie identifica e aproveita essa energia latente.
+            </p>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <img src="https://placehold.co/600x400/e2e8f0/333?text=Desperdício+vs+Oportunidade" alt="Ilustração do desafio energético" class="rounded-lg shadow-lg">
+                </div>
+                <div class="text-lg text-gray-700 space-y-4">
+                    <p>"Cada porta que se abre, cada passo dado, cada pedalada numa bicicleta de ginásio representa um potencial energético que, até agora, tem sido largamente ignorado."</p>
+                    <p>A nossa sociedade caminha para um futuro onde a energia poderá ser mais valiosa que o próprio ouro. A Zapdos Energie transforma o quotidiano em fonte de energia limpa, contribuindo para um futuro mais verde e economicamente eficiente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solucao" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">A Nossa Solução: Consultoria e <span class="text-yellow-500">Produto Modelar</span></h2>
+            <p class="section-subtitle max-w-3xl mx-auto">
+                Não vendemos apenas um produto; oferecemos uma análise especializada e implementamos soluções modulares personalizadas para capturar a energia do seu espaço.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card text-center reveal-on-scroll">
+                    <div class="icon-placeholder">P</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">ZapDoor</h3>
+                    <p class="text-gray-600">Energia a cada abertura e fecho de portas. Ideal para escritórios, lojas e hospitais.</p>
+                </div>
+                <div class="card text-center reveal-on-scroll">
+                    <div class="icon-placeholder">F</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">ZapFloor</h3>
+                    <p class="text-gray-600">Captação de energia a partir de passos em pisos e escadas. Perfeito para zonas de grande movimento.</p>
+                </div>
+                <div class="card text-center reveal-on-scroll">
+                    <div class="icon-placeholder">G</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">ZapFit</h3>
+                    <p class="text-gray-600">Transforma o esforço em equipamentos de ginásio em eletricidade. Para um fitness mais sustentável.</p>
+                </div>
+                <div class="card text-center reveal-on-scroll">
+                    <div class="icon-placeholder">T</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">ZapTouch</h3>
+                    <p class="text-gray-600">Pequenos movimentos, como pressionar maçanetas, geram energia para sensores e LEDs.</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                 <a href="#contacto" class="bg-yellow-500 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-600 transition-colors">Peça uma Análise Energética</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tecnologia" class="py-20 bg-gray-800 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-white">Como <span class="text-yellow-400">Funciona?</span></h2>
+            <p class="section-subtitle text-gray-300 max-w-3xl mx-auto">
+                Utilizamos princípios de *energy harvesting* consolidados, otimizando-os para máxima eficiência e durabilidade.
+            </p>
+            <div class="grid md:grid-cols-2 gap-10 items-start">
+                <div class="bg-gray-700 p-6 rounded-lg shadow-xl">
+                    <h3 class="text-2xl font-semibold text-yellow-400 mb-3">Indução Eletromagnética</h3>
+                    <p class="text-gray-300">Microgeradores convertem movimento rotacional ou linear (portas, equipamentos de ginásio) em corrente elétrica, de forma eficiente e robusta.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-xl">
+                    <h3 class="text-2xl font-semibold text-yellow-400 mb-3">Piezoeletricidade</h3>
+                    <p class="text-gray-300">Materiais especiais geram eletricidade quando sofrem pressão ou vibração (pisos, maçanetas), ideal para impactos repetitivos e interações.</p>
+                </div>
+            </div>
+             <div class="text-center mt-10">
+                <img src="https://placehold.co/700x300/4A5568/E2E8F0?text=Diagrama+Tecnológico+Zapdos" alt="Diagrama da tecnologia Zapdos" class="mx-auto rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <section id="mercados" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Para Quem é a <span class="text-yellow-500">Zapdos Energie?</span></h2>
+            <p class="section-subtitle max-w-3xl mx-auto">
+                Soluções adaptadas para diversos setores que procuram sustentabilidade, inovação e redução de custos.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Empresas e Escritórios</h3>
+                    <p class="text-gray-600">Reduza custos, cumpra metas ESG e melhore a sua imagem corporativa com energia gerada internamente.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Ginásios e Centros Desportivos</h3>
+                    <p class="text-gray-600">Ofereça um diferencial "verde", atraia clientes eco-conscientes e poupe na fatura de eletricidade.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Universidades e Escolas</h3>
+                    <p class="text-gray-600">Eduque pelo exemplo, reduza despesas e promova a inovação no campus.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Espaços Públicos</h3>
+                    <p class="text-gray-600">(Centros Comerciais, Aeroportos) Aproveite o alto fluxo para gerar energia e demonstrar vanguarda tecnológica.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Construtoras e Arquitetos</h3>
+                    <p class="text-gray-600">Integre soluções sustentáveis e inovadoras nos seus projetos, valorizando os imóveis.</p>
+                </div>
+                 <div class="card bg-yellow-50 border-l-4 border-yellow-500">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-2">O Seu Espaço?</h3>
+                    <p class="text-yellow-600">Tem um espaço com movimento? Vamos analisar o potencial energético juntos!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="impacto" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">O Impacto <span class="text-yellow-500">Zapdos Energie</span></h2>
+            <p class="section-subtitle max-w-3xl mx-auto">
+                Mais do que energia, geramos valor ambiental, social e económico.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="icon-placeholder bg-green-500">🌍</div>
+                    <h3 class="text-xl font-semibold text-gray-800 my-3">Impacto Ambiental</h3>
+                    <p class="text-gray-600">Redução da pegada de carbono, promoção de energia limpa e diminuição do desperdício energético.</p>
+                </div>
+                <div class="p-6">
+                    <div class="icon-placeholder bg-blue-500">👥</div>
+                    <h3 class="text-xl font-semibold text-gray-800 my-3">Impacto Social</h3>
+                    <p class="text-gray-600">Consciencialização para a sustentabilidade e envolvimento ativo dos cidadãos na geração de energia.</p>
+                </div>
+                <div class="p-6">
+                    <div class="icon-placeholder bg-yellow-500">📈</div>
+                    <h3 class="text-xl font-semibold text-gray-800 my-3">Impacto Económico</h3>
+                    <p class="text-gray-600">Redução de custos para os clientes, criação de empregos verdes e estímulo à inovação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-20 bg-yellow-500 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Transforma a tua pegada diária em energia!</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Vem minerar o futuro connosco, na Zapdos Energie.
+                Estamos prontos para analisar o potencial do seu espaço e desenhar uma solução à medida.
+            </p>
+            <form class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-2xl text-gray-700">
+                <h3 class="text-2xl font-semibold mb-6 text-gray-800">Fale Connosco</h3>
+                <div class="mb-4">
+                    <label for="name" class="block text-left mb-1 font-medium">Nome:</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-left mb-1 font-medium">Email:</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" required>
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-left mb-1 font-medium">Mensagem:</label>
+                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-xl font-bold text-yellow-400 mb-2">Zapdos Energie</p>
+            <p class="mb-4">A sua energia, o nosso futuro.</p>
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="#" class="hover:text-yellow-400">Facebook</a>
+                <a href="#" class="hover:text-yellow-400">LinkedIn</a>
+                <a href="#" class="hover:text-yellow-400">Instagram</a>
+            </div>
+            <p class="text-sm">&copy; <span id="currentYear"></span> Zapdos Energie. Todos os direitos reservados.</p>
+            <p class="text-sm"><a href="#" class="hover:text-yellow-400">Política de Privacidade</a> | <a href="#" class="hover:text-yellow-400">Termos de Uso</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Script para Menu Mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Script para links da Navbar fecharem o menu mobile ao clicar
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Script para links da Navbar (desktop e mobile) fazerem scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // Apenas para links internos da página, não para o botão de contacto que pode ir para outra página
+                if (this.getAttribute('href') !== '#' && this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    // Fecha o menu mobile se estiver aberto e for um link do menu mobile
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden') && this.closest('#mobile-menu')) {
+                         mobileMenu.classList.add('hidden');
+                    }
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Script para o ano atual no footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Script para animação de "reveal on scroll" (opcional, pode ser mais elaborado)
+        const revealElements = document.querySelectorAll('.reveal-on-scroll');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    // Opcional: parar de observar depois de revelado para não re-animar
+                    // revealObserver.unobserve(entry.target); 
+                }
+                // Opcional: para re-animar quando sai e entra novamente na viewport
+                // else {
+                //     entry.target.classList.remove('revealed');
+                // }
+            });
+        }, { threshold: 0.1 }); // Revela quando 10% do elemento está visível
+
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+
+    </script>
+
+</body>
+</html>
